@@ -1,8 +1,9 @@
 ﻿using System;
+
 namespace BalancedBrackets
 {
-	public class BalancedBrackets
-	{
+    public class BalancedBrackets
+    {
         /**
          * The function HasBalancedBrackets should return true if and only if
          * the input string has a set of "balanced" brackets.
@@ -36,9 +37,12 @@ namespace BalancedBrackets
                 {
                     brackets--;
                 }
+                if (brackets < 0)
+                {
+                    return false;
+                }
             }
             return brackets == 0;
         }
     }
 }
-
